@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="desafio1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4"><strong>CALCULADORA</strong></h1>
+        </div>
+
         <form>
-                <div class="form-row">
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Valor 1">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="valor 2">
-                  </div>
-               </div>
-               
-               <div class="form-row">
-                    <div class="col-6">
-                      <input type="text" class="form-control" placeholder="Valor 3">
-                    </div>
-                    <div class="col-6">
-                      <input type="text" class="form-control" placeholder="Media">
-                    </div>
-                 </div>
-              
+            <div class="row">
+                <div class="form-group col">
+                    <label for="valor1">Digite um valor</label>
+                    <input type="valor1" class="form-control" id="valor1">
+                </div>
+                <div class="form-group col">
+                    <label for="operacao">Selecione uma operação</label>
+                    <select class="form-control" id="operacao">
+                        <!-- tratamento de erro -->
+                        <option value="sem">--Selecione uma operação</option>
+                        <option value="adicao">Adição</option>
+                        <option value="subtracao">Subtração</option>
+                        <option value="multiplicação">Multiplicação</option>
+                        <option value="divisão">Divisão</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="valor2">Digite um valor</label>
+                    <input type="valor2" class="form-control" id="valor2">
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-sm-1 offset-sm-11">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="f_calculadora()">Resultado</button>
+                </div>
+            </div>
+            <br>
+            <div class="jumbotron">
+                <div class="form-group col">
+                    <label for="resultado">Resultado</label>
+                    <input type="resultado" class="form-control" id="resultado">
+                </div>
+            </div>
+
         </form>
 
+    </div>
+
+
+
+    <script src="desafio1.js"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
